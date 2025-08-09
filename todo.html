@@ -1,0 +1,61 @@
+<!-- //box.textContent is to get content inside a tag. and 
+ box.innerHTML is to get content inside a tag and also get incuding tag with content
+ Selecting tag,
+ To get value from tag ,
+ Change the tag content
+ Here just content change pananum na textContent use panuvom and 
+ HTML tag power voda senthu change pananum na innerHTML use panuvom-->
+
+ <!-- Different ways of selecting tag 
+  Normal ha tag select pananum na id use pani particular tag select panuvom--(document.getElementById("one")),
+  but enaku class select pananum na--(document.querySelector) intha queryselector use pani----
+  whole class yum select pana mudiyum, particular id yum select pana mudiyum, and particular tag yum select pana mudiyum
+    * class select panrathuku == document.querySelector(".one") here dot mention pananum,
+    * Tag select panrathuku == document.querySelector("h1")---eg.<h1>Balaji</h1> But same h1 tag is more means only first tag will be select,so thats why querySelectorAll will come.
+    * All tag same means then use document.querySelectorAll(".one"): TO GET ALL DATA IN SAME TAG AVAILABLE
+    eg:
+    <h1 class="one">mohan</h1>
+    <h1 class="one">balaji</h1>
+    <h1 class="one">monish</h1>
+    <script>
+        var allh1value=document.querySelectorAll(".one")
+        console.log(allh1value[0]) //print particular index value
+        for(count=0;count<allh1value.length;count=count+1){
+            console.log(allh1value[count]) //print all h1 tag
+            console.log(allh1value[count].textContent) //print all h1 tag content
+        }
+    
+    Array is collection of data:
+    var fruit=["apple","banana","grape","water melon"]
+    console.log(fruit.length) // length of array
+    console.log(fruit[1]) //print particular index value
+    for(count=0;count<fruit.length;i++){ //print all value
+    console.log(fruit[count])
+    }
+    
+    getElementsByClassName("one") use pani dot podama class name vechi select panika mudiyum
+    getElementsByTagName("p") use pani direct ha tag name poda mudiyum-->
+    <div>
+        <h1>bajaha</h1>
+        <h1>Mohan</h1>
+    </div>
+
+    <div class="1">
+        <h1>babukumaraj</h1>
+        <h1>Mohan raj</h1>
+    </div>
+    <script>
+        var div1=document.querySelector("div") //selecting tag
+        var data=document.createElement("h1")//create tag
+        data.textContent="Hello" //assign value for created tag
+        div1.insertAdjacentElement("afterbegin",data) //after assign value then insert
+
+        var div2=document.querySelector(".1")//selecting tag
+        var data2=document.createElement("h3")//create tag
+        data2.textContent="Hi boys" //assign value for created tag
+        div2.insertAdjacentElement("beforebegin",data2) 
+        // div.insertAdjacentElement("beforebegin",data) 
+        // div.insertAdjacentElement("beforeend",data) 
+        //var para=document.getElementById("p")
+       // para.remove() //element will be deleted
+    </script>

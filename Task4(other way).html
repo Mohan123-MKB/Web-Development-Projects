@@ -1,0 +1,13 @@
+<h1 id="result">DISPLAY NAME</h1>
+<button onclick="update(event)">John</button>
+<button onclick="update(event)">Bala</button>
+<button onclick="update(event)">Monish</button>
+
+<script>
+    var htag=document.getElementById("result")
+    function update(event)
+    {
+        htag.textContent=event.target.textContent
+    }
+    //event object ku ellam details um therium so event pass pani details get panikalam,Athku first target select pananum entha tag/element data venum nu
+</script>

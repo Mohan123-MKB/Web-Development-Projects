@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+  <style>
+    .blue-background {
+      background-color: blue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Change text on button -->
+  <div class="dom">
+    <button onclick="changeText()">Click me</button>
+    <p id="mainText">Java</p>
+  </div>
+  <br>
+  <!-- Add new paragraph below button -->
+  <div class="add-paragraph">
+    <button onclick="addPara()">New Paragraph</button>
+    <div id="adding"></div>
+  </div>
+  <br>
+  <!-- Toggle background color -->
+  <div class="color-toggle">
+    <button onclick="changeColor()">Toggle Color</button>
+  </div>
+  <br>
+  <!-- Show / Hide element -->
+  <div class="hi">
+    <button onclick="change()">Show/Hide</button>
+    <p id="helloText">Hello world</p>
+  </div>
+  <br>
+  <!-- count clicks on button -->
+   <div class="cnt">
+    <button onclick="countClick()">Click</button>
+    <p id="count">0</p>
+   </div>
+   <br>
+   <!-- update input field value -->
+    <div class="hello">
+        <input type="text" id="nameInput" placeholder="Name">
+        <button onclick="showValue()">show</button>
+        <p id="res"></p>
+    </div>
+    <br>
+    <!-- create list item dynamically -->
+     <div class="1">
+        <button onclick="addItem()">Add Item</button>
+        <ul id="list"></ul>
+     </div>
+
+  <script>
+    function changeText() {
+      const data = document.getElementById("mainText");
+      data.textContent = "JavaScript";
+    }
+
+    function addPara() {
+      const p = document.createElement("p");
+      p.textContent = "I am Mohan Balaji, aspiring software engineer.";
+      document.getElementById("adding").appendChild(p);
+    }
+
+    function changeColor() {
+      document.body.classList.toggle("blue-background");
+    }
+
+    function change() {
+      const data = document.getElementById("helloText");
+      if (data.style.display === "none") {
+        data.style.display = "block";  // FIXED: assignment, not comparison
+      } else {
+        data.style.display = "none";
+      }
+    }
+
+    let clicks = 0;
+ // Select the element once (outside the function)
+  const countElement = document.getElementById("count");
+  function countClick() {
+    clicks++;
+    countElement.textContent = clicks;  // using textContent
+  }
+
+  function showValue(){
+    let input=document.getElementById("nameInput")
+    document.getElementById("res").textContent=input.value
+  }
+
+  function addItem(){
+    let li=document.createElement("li")
+    li.textContent="new item"
+    let val=document.getElementById("list")
+    val.appendChild(li)
+
+  }
+
+  </script>
+
+</body>
+</html>

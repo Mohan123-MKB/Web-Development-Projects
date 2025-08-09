@@ -1,0 +1,58 @@
+<input id="num1">
+<input id="num2">
+<button onclick="adding()">ADD</button>
+<button onclick="subtracting()">SUB</button>
+<button onclick="multiplying()">MUL</button>
+<button onclick="dividing()">DIV</button>
+<p id="result">Result</p>
+
+<script>
+    //selecting tag
+    var box1=document.getElementById("num1")
+    var box2=document.getElementById("num2")
+    var result=document.getElementById("result")
+    
+
+    function adding()
+    {
+        //Take element from tag
+
+    var box1val=Number(box1.value)
+    var box2val=Number(box2.value)
+    var total=box1val+box2val
+   
+        result.textContent=total
+    }
+    function subtracting()
+    {
+        //Take element from tag
+
+    var box1val=Number(box1.value)
+    var box2val=Number(box2.value)
+    var total=box1val-box2val
+   
+        result.textContent=total
+    }
+    function multiplying()
+    {
+        //Take element from tag
+
+    var box1val=Number(box1.value)
+    var box2val=Number(box2.value)
+    var total=box1val*box2val
+   
+        result.textContent=total
+    }
+    function dividing()
+    {
+        //Take element from tag
+
+    var box1val=Number(box1.value)
+    var box2val=Number(box2.value)
+    var total=box1val/box2val
+   
+        result.textContent=total
+    }
+
+
+</script>

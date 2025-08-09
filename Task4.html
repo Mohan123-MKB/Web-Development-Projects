@@ -1,0 +1,30 @@
+<h1 id="names">SHOW NAME</h1>
+<button id="one" onclick="nameChangeBtn1()">John</button>
+<button id="two" onclick="nameChangeBtn2()">Hari</button>
+<button id="three" onclick="nameChangeBtn3()">Praveen</button>
+
+<script>
+    //selecting tag what tag u change
+    var naming=document.getElementById("names")
+    var button1=document.getElementById("one")
+    var button2=document.getElementById("two")
+    var button3=document.getElementById("three")
+
+
+    function nameChangeBtn1()
+    {
+        var button1Data=button1.textContent
+        naming.textContent=button1Data
+    }
+    function nameChangeBtn2()
+    {
+        var button2Data=button2.textContent
+        naming.textContent=button2Data
+    }
+    function nameChangeBtn3()
+    {
+        var button3Data=button3.textContent
+        naming.textContent=button3Data
+    }
+
+</script>

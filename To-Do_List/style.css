@@ -1,0 +1,279 @@
+/* Layout + background */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    background-color: aquamarine;
+}
+
+/* Spacing */
+header, main {
+    width: 90%;
+    max-width: 500px;
+    margin-top: 15px;
+}
+
+/* Keep input & button in one row */
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Fixed sizes for input & button */
+#taskInput {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#add {
+    width: 80px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: rgb(162, 190, 49);
+    border: none;
+    cursor: pointer;
+}
+
+/* Task list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    background-color: azure;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+li.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Button hover effect */
+#add:hover {
+    background-color: rgb(226, 43, 43);
+}
+
+/* Responsive for small screens */
+@media (max-width: 500px) {
+    .input-group {
+        flex-direction: column;
+    }
+    #add {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* (Flow:layout->spacing->typography->color->effects->responsive)
+
+/* layout + colors */
+/* body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    background-color: aquamarine;
+} */
+
+/* spacing */
+/* header, main {
+    width: 90%;
+    max-width: 500px;
+    margin-top: 15px;
+} */
+/* 
+.todo-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px; /* fixed typo here */
+/* } */
+
+/* typography
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+} */
+
+/* input, button {
+    font-size: 20px;
+}
+
+/* colors */
+/* header {
+    color: rgb(15, 11, 6);
+} */ 
+/* 
+button {
+    background-color: rgb(162, 190, 49);
+    color: rgb(10, 10, 11);
+    border: none;
+}
+
+li {
+    background-color: azure;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
+} */
+
+/* effects */
+/* button:hover {
+    background-color: rgb(226, 43, 43);
+    cursor: pointer;
+}
+
+li.done {
+    text-decoration: line-through;
+    color: gray;
+} */
+
+/* responsive design */
+/* @media (max-width: 500px) {
+    .todo-container {
+        flex-direction: column;
+    }
+} */ 

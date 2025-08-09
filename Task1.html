@@ -1,0 +1,32 @@
+<input id="inputBox1">
+<button  onclick="eventUpdate()"></button>
+<h1 id="result1"></h1>
+<input id="inputBox2" onkeyup="secondBoxUpdate()">
+<h1 id="result2"></h1>
+
+<script>
+    //selecting tag
+    var boxvalue1=document.getElementById("inputBox1")
+    // boxvalue1.style.backgroundColor='blue'//when u want to add css property
+    var result1=document.getElementById("result1")
+
+    var boxvalue2=document.getElementById("inputBox2")
+    var result2=document.getElementById("result2")
+    function eventUpdate()
+    {
+        var box1EnterValue=boxvalue1.value
+        
+        result1.textContent=box1EnterValue
+        result1.style.backgroundColor='yellow'
+
+    }
+
+    function secondBoxUpdate()
+    {
+        var box2EnterValue=boxvalue2.value
+        result2.textContent=box2EnterValue
+        result2.style.backgroundColor='lightgreen'
+
+
+    }
+</script>

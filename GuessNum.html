@@ -1,0 +1,31 @@
+<h1>Guess the number</h1>
+<input id="guessnumber">
+<button onclick="guessingCheck()">Check</button>
+<p id="answer">You are Wrong/Right</p>
+<p id="score">SCORE:10</p>
+
+<script>
+    //selecting tag what you to change
+    var guessnumber=document.getElementById("guessnumber")
+    var result=document.getElementById("answer")
+    var score=document.getElementById("score")
+    //random number first generate then same random number until restart the game
+    var randomNumber=Math.floor(Math.random()*10)+1 
+    var totalScore=10
+
+    function guessingCheck()
+    {
+        var boxValGuessNum=Number(guessnumber.value)
+        if(randomNumber==boxValGuessNum){
+            console.log("Right")
+            result.textContent="Right"
+            alert("You won")
+        }
+        else{
+            totalScore=totalScore-1
+            score.textContent="SCORE:"+totalScore
+            result.textContent="Wrong"
+        }
+    }
+
+</script>

@@ -1,0 +1,33 @@
+<input id="data">
+<button onclick="add()">Add</button>
+<ul id="1">
+    <li>
+        Hello
+        <button onclick="deleteItem(event)">Delete</button>
+    </li>
+</ul>
+
+<script>
+    //selecting tag
+    var ulnewliItem=document.getElementById("1")
+    var inputVal=document.getElementById("data")
+    function add(){
+        // //element/tag li create pananum because task is to add list in unorderlist.
+        // var liItem=document.createElement("li")
+        // //value assign pannum
+        // liItem.textContent="world"
+        // ulnewli.append(liItem) this is direct value assign
+        
+        //create list for add data will be add in unorderlist
+        var listItem=document.createElement("li")
+        // listItem.textContent=inputVal.value
+        listItem.innerHTML=inputVal.value + "<button onclick='deleteItem(event)'>Delete</button>"
+        ulnewliItem.append(listItem)
+    }
+    function deleteItem(event){
+        event.target.parentElement.remove()
+
+    }
+
+
+</script>

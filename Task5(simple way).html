@@ -1,0 +1,22 @@
+<h1  onclick="deleteWord(event)">MOHAN BALJAI</h1>
+<h1  onclick="deleteWord(event)">DINESH KUMAR</h1>
+<h1  onclick="deleteWord(event)">SANJAY</h1>
+<h1  onclick="deleteWord(event)">DHONI</h1>
+<h1  onclick="deleteWord(event)">VIRAT KHOLI</h1>
+<h1  onclick="deleteWord(event)">ROHIT SHARMA</h1>
+<script>
+    //why use event object:
+    //Here instead of using to create multiple function for multiple element/tag to delete,
+    // we use event(object)-this obj get all details for tag/element so need to select for event then use target
+    //use of event obj is we use one function is enough for same thing will happen for all tag/element so it is easy
+    // var h1=document.getElementById("1")
+    // var h2=document.getElementById("2")
+    // var h3=document.getElementById("3")
+    // var h4=document.getElementById("4")
+    // var h5=document.getElementById("5")
+    // var h6=document.getElementById("6")
+    function deleteWord(event)
+    {
+        event.target.remove()     
+    }
+</script>

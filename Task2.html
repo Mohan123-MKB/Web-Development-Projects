@@ -1,0 +1,19 @@
+<button onclick="update()">ADD</button>
+<div id="result"></div>
+
+<script>
+    //select div tag
+    var div=document.getElementById("result")
+    function update()
+    {
+        //enaku each time press button then new tag generate aganum h1 tag/element
+        //create new element
+        var listH1=document.createElement("h1") //here it create <h1></h1>
+        listH1.textContent="Mohan hello"
+         var listH2=document.createElement("h3") //here it create <h1></h1>
+        listH2.textContent="How are you"
+        div.append(listH1)
+        div.append(listH2)
+
+    }
+</script>
