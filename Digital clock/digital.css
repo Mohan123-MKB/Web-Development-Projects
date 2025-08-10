@@ -1,0 +1,32 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:80vh;
+    background-color: aqua;
+    margin: 0;
+}
+.clock-container{
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: #e2485a;
+}
+h1{
+    color: rgb(28, 25, 25);
+    font-size: 2rem;
+}
+#clock{
+    font-size: 3rem;
+    font-weight: bold;
+    color:azure;
+    margin-top: 10px;
+}
+#clock{
+    text-shadow: 0 0 10px #ffcc00;
+}
+@media(max-width:500px){
+    #clock{
+        font-size: 2rem;
+    }
+}
